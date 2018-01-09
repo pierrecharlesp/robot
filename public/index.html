@@ -23,7 +23,7 @@
     <script src="/socket.io/socket.io.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
  <script>
-    		var socket = io.connect('http://10.200.29.151:8080');
+    		var socket = io.connect('http://safe-crag-82992.herokuapp.com');
 
 			socket.on('botMessage', function(message) {	
                	 $('#datadiv').append("<div class=\"bubbledLeft\">"+ message +"</div>"); 
