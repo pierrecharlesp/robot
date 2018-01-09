@@ -1,0 +1,24 @@
+{
+  "name": "socket.io-chat",
+  "version": "0.1.0",
+  "description": "A simple chat client using socket.io",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "express": "latest",
+    "socket.io":"latest",
+    "xpath":"latest",
+    "xmldom":"latest"
+
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+  ,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierrecharlesp/robot"
+  },
+}

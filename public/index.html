@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mon compagnon</title>
+<link rel="stylesheet" type="text/css" href="css/style2.css">
+    </head>
+
+    <body>
+        <h1>Robot DSI</h1>
+
+<div id="datadiv" class="commentArea">
+</div>   
+
+<div  class="navbar">
+	<div>Choississez votre réponse
+	</div>
+	<div id="datadivbottom">
+	</div>
+</div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+ <script>
+    		var socket = io.connect('http://10.200.29.151:8080');
+
+			socket.on('botMessage', function(message) {	
+               	 $('#datadiv').append("<div class=\"bubbledLeft\">"+ message +"</div>"); 
+				 var elem = document.getElementById('datadiv');
+				elem.scrollTop = elem.scrollHeight;				 
+            })
+			socket.on('humanMessage', function(message) {	
+               	 $('#datadiv').append("<div class=\"bubbledRight\">"+ message +"</div>");        
+            })
+				
+            socket.on('initialchoices', function(bots) {  
+			$('#datadivbottom').empty();
+                for (i = 0; i < bots.length; i++) {
+						 $('#datadivbottom').append("<a onclick=\"clickInitial(\'"+ bots[i].code +"\', \'"+ bots[i].display +" \')\">"+ bots[i].display +"</a>");  
+                }
+            })
+			
+			
+			socket.on('choices', function(bots) {  
+			$('#datadivbottom').empty();
+			console.log("tst");
+                for (i = 0; i < bots.length; i++) {
+						 $('#datadivbottom').append("<a onclick=\"clickChoice(\'"+ bots[i].id +"\', \'"+ bots[i].display +" \')\">"+ bots[i].display +"</a>");  
+                }
+            })
+			
+			 socket.on('replay', function(bots) {  
+				$('#datadivbottom').empty();
+                $('#datadivbottom').append("<a onclick=\"clickReplay()\">Re-commmencer</a>"); 
+            })
+			
+			
+</script>
+<script>
+
+function clickReplay(appli, display) {
+	 location.reload();
+}
+
+
+function clickInitial(appli, display) {
+	$('#datadivbottom').empty();
+    socket.emit('initialchoice', {appli: appli, display: display} );
+}
+function clickChoice(id, display) {
+	$('#datadivbottom').empty();
+    socket.emit('choice', {id: id, display: display} );
+}
+</script>
+</body>
+</html>
+

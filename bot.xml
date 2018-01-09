@@ -1,0 +1,99 @@
+<bots>
+  <bot display="Sur GFD" id="1" code="GFD">
+    <text>Comment puis je vous aider sur GFD ?</text>
+    <choices>
+      <choice id="10" text="A creer un OMP">
+        <text>Pour créer un OMP, blablabal, quel véhicule allez vous utilisé ?</text>
+        <choices>
+          <choice id="101" text="Véhicule personnel">
+            <text>Pour utiliser son véhicule personnel, vous devez avoir une autorisation d'utilisation de véhicule à jour. Avez vous un AUV à jour ?</text>
+            <choices>
+              <choice id="1011" text="Oui">
+                <text>Très bien, un OMP vous permet blablababa</text>
+              </choice>
+              <choice id="1012" text="Non">
+                <text>La première étape est donc de créer un AUV. Pour cela, il vous faut ...</text>
+              </choice>
+            </choices>
+          </choice>
+          <choice id="102" text="Véhicule de service">
+            <text>Aucun AUV n'est demandé pour utiliser le véhicule de service. Pour créer un OMP, connectez vous sur GFD. Cliquez sur le menu Mission puis OMP puis Création. On continue ?</text>
+            <choices>
+              <choice id="1021" text="Oui">
+                <text>Très bien. Cliquez maintenant sur le bouton en forme de crayon en bas de l'écran.</text>
+              </choice>
+              <choice id="1022" text="Non">
+                <text>N'hésitez pas à me solliciter pour qu'on avance ensemble.</text>
+              </choice>
+            </choices>
+          </choice>
+        </choices>
+      </choice>
+      <choice id="11" text="A creer un OMI">
+        <text>Je ne peux pas encore vous aider sur ce sujet. Désolé.</text>
+      </choice>
+      <choice id="12" text="A creer un Frais">
+        <text>Je ne peux pas encore vous aider sur ce sujet. Désolé.</text>
+      </choice>
+    </choices>
+  </bot>
+  <bot display="Sur les Marchés" id="2" code="MRC">
+    <text>Comment puis je vous aider sur la gestion des marchés ?</text>
+    <choices>
+      <choice id="20" text="Sur les commandes">
+        <text>Pour créer une commande, blabalbal, que souhaitez vous faire ?</text>
+        <choices>
+          <choice id="201" text="Créer une commande sur un marché">
+            <text>Je ne peux pas encore vous aider sur ce sujet. Désolé.</text>
+          </choice>
+          <choice id="202" text="Créer une commande en exclusivité">
+            <text>Je ne peux pas encore vous aider sur ce sujet. Désolé.</text>
+          </choice>
+        </choices>
+      </choice>
+      <choice id="21" text="Sur les marchés">
+        <text>Que souhaitez vous faire ?</text>
+        <choices>
+          <choice id="211" text="Renouveler un marché">
+            <text>Pour renouveler marché, vous aurez besoin d'un devis, d'un bordereau de prix unitaires. Avez vous ces pièces ?</text>
+            <choices>
+              <choice id="2111" text="Oui">
+                <text>Parfait. Il faut également préparer le CCTP. &lt;a href="https://www.charente-maritime.fr/cusco/share/page/site/dsi-achats/document-details?nodeRef=workspace://SpacesStore/e39a0032-08e8-48da-9ac7-3621ae71c343"&gt;Exemple CCTP&lt;/a&gt; On continue ?</text>
+                <choices>
+                  <choice id="21111" text="Oui">
+                    <text>Super. Pouvez vous copier ces documents dans Cusco sur le site &lt;a href="https://www.charente-maritime.fr/cusco/share/page/site/dsi-achats/documentlibrary#filter=path|%2FDSI%20-%20APP"&gt;DSI-Achats&lt;/a&gt; ?</text>
+                    <choices>
+                      <choice id="211111" text="Oui">
+                        <text>Bravo. Allez on y est presque. Il faut maintenant créer la fiche projet marché.&lt;a href="https://www.charente-maritime.fr/cusco/share/page/site/dsi-achats/document-details?nodeRef=workspace://SpacesStore/2262b7d2-4700-40d6-bbba-939b4001648b"&gt;Modèle&lt;/a&gt; C'est bon ?</text>
+                        <choices>
+                          <choice id="2111111" text="Oui on continue.">
+                            <text>Le plus dur est fait.&lt;br&gt;Vous pouvez copier la FPM dans &lt;a href="https://www.charente-maritime.fr/cusco/share/page/site/dsi-achats/documentlibrary?file=0-FICHE%20PROJET%20MARCHE%20DSI%20-%20MAPA%20OUVERT%20-%20MODELE.docx#filter=path|%2FDSI%20-%20APP%2F0%20-%20Demandes%20de%20march%C3%A9%2F0%20-%20Demandes"&gt;le site CUSCO.&lt;/a&gt; &lt;br&gt;Martine sera alors prévenue automatiquement et la FPM finale sera envoyée à la cellule des marchés. Le chef de service et vous serez prévenus. &lt;br&gt;Avez vous eu le retour de la cellule marché ? </text>
+                          </choice>
+                          <choice id="2111112" text="Non">
+                            <text>Ok. Donc attendez et revenez me voir quand ce sera le cas.</text>
+                          </choice>
+                        </choices>
+                      </choice>
+                      <choice id="211112" text="Non">
+                        <text>Ok dommage. Revenez quand ce sera possible.</text>
+                      </choice>
+                    </choices>
+                  </choice>
+                  <choice id="21112" text="Non">
+                    <text>Ok. Je vous laisse le préparer et on se reparle plus tard.</text>
+                  </choice>
+                </choices>
+              </choice>
+              <choice id="2112" text="Non">
+                <text>Il faut donc dans un premier temps récupérer ces pièces pour qu'on puisse continuer.</text>
+              </choice>
+            </choices>
+          </choice>
+          <choice id="212" text="Créer un marché en exclusivité">
+            <text>Je ne peux pas encore vous aider sur ce sujet. Désolé.</text>
+          </choice>
+        </choices>
+      </choice>
+    </choices>
+  </bot>
+</bots>
